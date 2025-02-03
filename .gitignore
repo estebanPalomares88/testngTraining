@@ -7,6 +7,7 @@
 #IntelliJ
 *.iml
 /.idea/
+.env
 
 # BlueJ files
 *.ctxt
