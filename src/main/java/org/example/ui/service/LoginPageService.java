@@ -5,6 +5,7 @@ import io.github.cdimascio.dotenv.Dotenv;
 import org.example.ui.pom.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,8 +21,10 @@ public class LoginPageService {
     private final WebDriverWait wait;
 
     public LoginPageService() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
         WebDriverManager.chromedriver().setup();
-        this.driver = new ChromeDriver();
+        this.driver = new ChromeDriver(options);
         Duration elementTimeOut = Duration.ofSeconds(10);
         this.wait = new WebDriverWait(this.driver, elementTimeOut);
     }
