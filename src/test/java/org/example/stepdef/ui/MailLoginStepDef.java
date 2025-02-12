@@ -19,8 +19,6 @@ public class MailLoginStepDef {
     @When("User uses {string} credentials")
     public void user_uses_credentials(String scenario) throws InterruptedException {
         this.loginPageController.sendCredentials(scenario);
-        Thread.sleep(5000);
-
     }
 
     @Then("User in logged")
