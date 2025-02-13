@@ -7,7 +7,7 @@ import org.example.ui.controller.LoginPageController;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class MailLoginStepDef {
+public class LoginStepDef {
 
     private final LoginPageController loginPageController = new LoginPageController();
 

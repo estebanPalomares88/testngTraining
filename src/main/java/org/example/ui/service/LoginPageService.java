@@ -12,10 +12,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class LoginPageService {
-    Dotenv env = Dotenv.load();
-    String url = this.env.get("UI_URL");
 
-
+    private final Dotenv env = Dotenv.load();
+    private final String url = this.env.get("UI_URL");
     private final LoginPage page = new LoginPage();
     private final WebDriver driver;
     private final WebDriverWait wait;
